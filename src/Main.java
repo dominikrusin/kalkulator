@@ -3,18 +3,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
-        int A;
-        int B;
+        double A;
+        double B;
         double wynik;
 
         System.out.println("Podaj pierwszą liczbę");
-        A = scanner.nextInt();
-        System.out.println("Podaj drugą liczbę");
-        B = scanner.nextInt();
+        A = scanner.nextDouble();
         System.out.println("podaj działanie: +, -, *, /");
         char działanie  = scanner.next().charAt(0);
+        System.out.println("Podaj drugą liczbę");
+        B = scanner.nextDouble();
         switch (działanie) {
             case ('+'):
+ //               wynik = A + B;
                 System.out.println(A + B);
                 break;
             case ('-'):
@@ -30,6 +31,8 @@ public class Main {
                 System.out.println(A/B);
             }
                 break;
+            default: System.out.println("Error! Błędny symbol działania");
+  //          System.out.println(A + działanie + B + "=" + wynik);
 
         }
     }
